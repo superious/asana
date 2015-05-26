@@ -187,6 +187,8 @@ class AsanaAPI(object):
         status_code = int(status_code)
         if status_code / 200 == 1:
             return True
+        elif status_code / 201 == 1:
+            return True
         elif status_code / 400 == 1:
             if status_code is 404:
                 return True
