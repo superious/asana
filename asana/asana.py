@@ -185,9 +185,9 @@ class AsanaAPI(object):
     def _ok_status(cls, status_code):
         """Check whether status_code is a ok status i.e. 2xx or 404"""
         status_code = int(status_code)
-        if status_code / 200 == 1:
+        if status_code // 200 == 1:
             return True
-        elif status_code / 400 == 1:
+        elif status_code // 400 == 1:
             if status_code is 404:
                 return True
             else:
